@@ -1,6 +1,6 @@
 class PolishesController < ApplicationController
-
   def index
+    @polishes = Polish.all
   end
 
   def show
@@ -27,5 +27,4 @@ class PolishesController < ApplicationController
   def polish_params
     params.require(:polish).permit(:name, :brand, :hex_color, :photo_url)
   end
-
 end

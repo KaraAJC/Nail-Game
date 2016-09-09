@@ -1,0 +1,11 @@
+<h1>Current Polishes</h1>
+<div class="col-md-4">
+  <% @polishes.each do |polish| %>
+    <h2><%= polish.name %></h2>
+    <h3><%= polish.brand %></h3>
+    <div class="media">
+      <img src="<%=polish.photo_url%>">
+    </div>
+    <a class="btn btn-lg" href="<% edit_polish_path(polish.id) %>">Edit</a>
+  <% end %>
+</div>
